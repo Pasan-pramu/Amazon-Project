@@ -46,7 +46,7 @@ function deliveryOptionsHTML(matchingProduct, cartItem) {
 // =======================
 // Cart Summary
 // =======================
-export function renderCartSummary() {    
+export function renderOrderSummary() {    
   let cartSummaryHTML = '';
 
   cart.forEach((cartItem) => {
@@ -113,7 +113,7 @@ export function renderCartSummary() {
     link.addEventListener('click', () => {
       const productId = link.dataset.productId;
       removeFromCart(productId);
-      renderCartSummary(); // Re-render to update the UI
+      renderOrderSummary(); // Re-render to update the UI
 
       renderPaymentSummary();
     });
@@ -126,7 +126,7 @@ export function renderCartSummary() {
     element.addEventListener('click', () => {
       const { productId, deliveryOptionId } = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
-      renderCartSummary(); // Re-render to update delivery date and checked status
+     renderOrderSummary(); // Re-render to update delivery date and checked status
     });
   });
 }
