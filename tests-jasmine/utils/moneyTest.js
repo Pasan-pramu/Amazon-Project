@@ -1,4 +1,4 @@
-import { formatCurrency } from "../scripts/utils/money.js";
+import { formatCurrency } from "../../scripts/utils/money.js";
 
 
 describe ('test suite : formatCurrency' , () =>{
@@ -13,7 +13,6 @@ describe ('test suite : formatCurrency' , () =>{
     });
 
      it('round up to the nearest test' , ()=>{
-
         expect(formatCurrency(2000.5)).toEqual('20.01');
     });
 });
